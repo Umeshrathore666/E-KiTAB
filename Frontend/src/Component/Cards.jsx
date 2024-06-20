@@ -1,22 +1,24 @@
-import React from 'react'
-
-const Cards = ({frigment}) => {
-  console.log(frigment);
+import React from 'react';
+const Cards = ({item}) => {
   return (
   <>
-  <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <div className='mt-4 my-3 p-3'>
+  <div className="card w-92 bg-base-100 shadow-xl hover:scale-105 duration-300 dark:bg-slate-900 dark:text-white dark:border">
+  <figure>
+    <img src={item.image}alt="Book"/>
+    </figure>
   <div className="card-body">
     <h2 className="card-title">
-      Shoes!
-      <div className="badge badge-secondary">NEW</div>
+  {item.name}
+      <div className="badge badge-secondary">{item.category}</div>
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div> 
-      <div className="badge badge-outline">Products</div>
+    <p>{item.title}</p>
+    <div className="card-actions justify-between">
+      <div className="badge badge-outline">${item.price}</div> 
+      <div className=" hover:bg-pink-500 hover:text-white border-[2px] rounded-full p-1  duration-200 cursor-pointer text-sm ">Buy Now</div>
     </div>
   </div>
+</div>
 </div>
   </>
   )

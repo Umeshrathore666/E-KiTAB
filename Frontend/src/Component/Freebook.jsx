@@ -2,12 +2,13 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import List from '../../public/List.json'
+import List from '../../public/List.json';
 import Cards from './Cards';
 
-const Freebook = (porps) => {
-    const filterData = List.filter((data) => data.category === "Stroy Book");
-    var settings = {
+const Freebook = () => {
+    const filterData = List.filter((data) => data.category==="Free");
+
+    const settings = {
         dots: true,
         infinite: false,
         speed: 500,
@@ -41,20 +42,21 @@ const Freebook = (porps) => {
             }
         ]
     };
+
     return (
         <>
             <div className='max-w-screen-2xl container md:px-20 px-4'>
                 <div>
-                    <h1 className='font-bold text-xl pb-3'>Your E-Kitab Book </h1>
-                    <p>Please you choice your Book and gain your khowlege again and agin you choice your Book and gain your khowlege again and agin</p>
-
+                    <h1 className='font-bold text-xl pb-3'>Your E-Kitab Book</h1>
+                    <p>Please choose your Book and gain your knowledge again and again.</p>
                 </div>
-
                 <div>
                     <Slider {...settings}>
-                        {filterData.map((frigment) =>(<Cards item={frigment} key={frigment.id}/>
-                      ))}
-                         
+                        {filterData.map((item) => (
+                            <div>
+                                <Cards item={item} key={item.id} />
+                            </div>
+                        ))}
                     </Slider>
                 </div>
             </div>
@@ -62,4 +64,4 @@ const Freebook = (porps) => {
     );
 }
 
-export default Freebook
+export default Freebook;
