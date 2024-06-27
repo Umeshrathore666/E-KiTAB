@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Home/Home';
 import Courses from './Courses/Courses';
 import Signup from './Component/Signup';
-import Login from './Component/Login';
+import Contacts from './Contacts/Contacts';
 
 
 
@@ -14,7 +14,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/course' element={<Courses/>} />
         <Route path='/signup' element={<Signup/>} />
-        <Route path='/login' element={<Login/>} />
+        <Route path='/contact' element={<Contacts/>}/>
 
       </Routes>
     </div>

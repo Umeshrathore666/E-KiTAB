@@ -42,7 +42,7 @@ const Navbars = () => {
                 <Link to='/course'>Course</Link>
             </li>
             <li className="hover:bg-pink-300 rounded-md">
-                <Link to='/contect'>Contact</Link>
+                <Link to='/contact'>Contact</Link>
             </li>
         </>
     );

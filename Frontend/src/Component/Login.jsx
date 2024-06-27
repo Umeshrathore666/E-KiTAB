@@ -12,7 +12,6 @@ const Login = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        // Clear the input fields after form submission
         reset();
     };
 
